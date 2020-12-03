@@ -14,11 +14,9 @@ export class NavbarComponent implements OnInit {
   }
 
   signOutGoogle(){
-    this.authService.signOutGoogle();
   }
 
   signOutOffice(){
-    this.authService.signOutOffice();
   }
 
 }

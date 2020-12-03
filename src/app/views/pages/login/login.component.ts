@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleApiService } from 'ng-gapi';
 import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
@@ -9,20 +8,16 @@ import { AuthService } from '../../../services/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService,
-    private gapiService: GoogleApiService) {
-    this.gapiService.onLoad().subscribe();
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit(): void {
   }
 
   signInGoogle(){
-    this.authService.signInGoogle();
   }
 
   signInOffice(){
-    this.authService.signInOffice();
   }
 
 }
